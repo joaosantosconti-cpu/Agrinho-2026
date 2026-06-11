@@ -1,0 +1,161 @@
+/* Configurações Globais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-color: #f7f9f6;
+    --card-bg: #ffffff;
+    --text-color: #2e3b2e;
+    --primary-green: #2c5e3b;
+    --accent-green: #8ebd6e;
+    --subtitle-color: #d2ebd4;
+    --quote-bg: #eaefe9;
+    --border-color: #e0e8e1;
+}
+
+/* Classe que o JavaScript usará para o Modo Escuro */
+.dark-mode {
+    --bg-color: #1a241b;
+    --card-bg: #233025;
+    --text-color: #e2ebe3;
+    --primary-green: #183b23;
+    --accent-green: #68964d;
+    --subtitle-color: #a3cfa7;
+    --quote-bg: #2d3d30;
+    --border-color: #344737;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Cabeçalho */
+.header-banner {
+    background-color: var(--primary-green);
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 5px solid var(--accent-green);
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.header-banner h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.header-banner .subtitle {
+    font-size: 1.1rem;
+    color: var(--subtitle-color);
+    margin-bottom: 20px;
+}
+
+/* Botão de Alternar Tema */
+.btn-theme {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-theme:hover {
+    background-color: #ffffff;
+    color: var(--primary-green);
+}
+
+/* Container do Conteúdo */
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    transition: background-color 0.3s;
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    color: var(--accent-green);
+    margin-bottom: 25px;
+    font-style: italic;
+    border-left: 4px solid var(--accent-green);
+    padding-left: 15px;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: var(--accent-green);
+    margin-top: 35px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 5px;
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Caixa de Citação */
+.quote-box {
+    background-color: var(--quote-bg);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-left: 4px solid var(--accent-green);
+    transition: background-color 0.3s;
+}
+
+.quote-box p {
+    margin: 0;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.quote-box span {
+    font-size: 0.85rem;
+    color: var(--accent-green);
+    display: block;
+    margin-top: 5px;
+}
+
+/* Listas */
+.action-list {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.action-list li {
+    margin-bottom: 12px;
+}
+
+/* Rodapé */
+.footer-bar {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--accent-green);
+}
+
+/* Responsividade Básica para Celular */
+@media (max-width: 600px) {
+    .header-banner h1 { font-size: 1.6rem; }
+    .container { margin: 10px; padding: 15px; }
+}
